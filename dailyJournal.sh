@@ -20,13 +20,14 @@ fi
 
 FILENAME=~/Dropbox/Notes/journal_commandline/daily$DA.txt 
 if [  -f $FILENAME ]; then
-	vim $FILENAME  -c 'set syntax=markdown'
+	vim $FILENAME  -c 'set syntax=rst' -c 'set autochdir' -c 'set tags=tags;'
 else
 	touch $FILENAME
 	echo **Journal for the day:  $DA**  > $FILENAME 
 	echo >> $FILENAME
 	echo >> $FILENAME
-	echo  \# scratch >> $FILENAME
-	vim $FILENAME  -c 'set syntax=markdown'
+        echo   scratch >> $FILENAME
+        echo   ======= >> $FILENAME
+	vim $FILENAME  -c 'set syntax=rst' -c 'set autochdir' -c 'set tags=tags;'
 fi
 
