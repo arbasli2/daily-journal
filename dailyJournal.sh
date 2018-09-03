@@ -1,5 +1,5 @@
 #!/bin/sh
-
+# creates an template and opens vim for editing it. the journal is supposed to be written in RestructuredText format
 # usage 
 #dailyJournal   # journal of today
 #dailyJournal  2   # it shows the journal of 2 days ago
